@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Open+Sans:ital,wght@1,300&family=Roboto&family=Ubuntu:wght@300&display=swap');
+
+html *{ 
+    background-color: #d3d3d3 ;
+    font-family: 'Ubuntu', sans-serif;
+}
+body {
+    text-align: center;
+}
+h1 {
+    font-size: 55px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+}
+.sketchContainer { 
+    border: 2px solid black;
+    width: 400px;
+    height: 400px;
+    margin-left: 20px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+}
+.divs {
+    border: 1px solid gray;
+}
