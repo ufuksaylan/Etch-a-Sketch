@@ -49,8 +49,15 @@ h1 {
     margin-left: 20px;
     background-color: white;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
 }
 .divs {
     border: 1px solid gray;
+    flex-grow: 1;
+}
+.div-container {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
 }

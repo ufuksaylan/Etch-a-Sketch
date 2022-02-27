@@ -8,7 +8,7 @@ const DimensionValue = document.getElementById("DimensionValue");
 // Update the current slider value  and sketch (each time you drag the slider handle)
 slider.oninput = function(){
   // delete divs 
-  document.querySelectorAll('.divs').forEach(e => e.remove());
+  document.querySelectorAll('.div-container').forEach(e => e.remove());
 
   DimensionValue.innerHTML = `${slider.value}x${slider.value}`;
   const totalDiv = slider.value;
@@ -65,11 +65,15 @@ function rainbowMode(){
   });
 }
 function createDivs(totalDiv){
-  let divWidth = (400/totalDiv) -2;
-  for (let i = 0; i < totalDiv *totalDiv; i++) {
-    const newDiv = document.createElement('div'); 
-    newDiv.classList.add('divs');
-    newDiv.setAttribute('style', `width: ${divWidth}px`);
-    sketch.appendChild(newDiv);
+  for (let i = 0; i < totalDiv; i++) {
+    const container = document.createElement('div'); 
+    container.classList.add('div-container');
+    
+    for (let j = 0; j < totalDiv; j++) {
+      const newDiv = document.createElement('div'); 
+      newDiv.classList.add('divs');
+      container.appendChild(newDiv);
+    }
+    sketch.appendChild(container);
   }
 }
