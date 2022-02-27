@@ -11,15 +11,18 @@
     <h1>Etch A Sketch</h1>    
     <div class="container">
         <div id="controlBar">
-            <input type="range" id="DimensionSlider" min="1" max="100" value="16">
-            <p><span id="DimensionValue">16x16</span></p>
+            <button id="blackMod" class="barButtons buttons">Black Mode</button>
+            <button id="rainbowMode" class="barButtons buttons">Rainbow Mode</button>
+            <button id="eraser" class="barButtons buttons">Eraser</button>
+            <button id="clean" class="barButtons buttons">Clean</button>
+            <input type="range" class="barButtons" id="DimensionSlider" min="1" max="100" value="16">
+            <p><span id="DimensionValue" class="barButtons">16x16</span></p>
         </div>
         <div id="sketch" class="sketchContainer">
-
         </div>
     </div>
     <script src="./script.js"></script>
-
-
 </body>
 </html>
+
+
